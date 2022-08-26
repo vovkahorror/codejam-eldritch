@@ -1,0 +1,188 @@
+@font-face {
+  font-family: Eckmann;
+  src: url("assets/fonts/eckmannc-webfont.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  background: url("assets/home.png") no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ancients {
+  flex-basis: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 20px;
+}
+
+.ancient {
+  width: 45%;
+  border-radius: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.ancient:hover,
+.difficulty-item:hover {
+  transform: scale(1.1);
+}
+
+.ancient-active {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 14px 9px rgba(221, 204, 192, 1);
+}
+
+.difficulty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.difficulty-item {
+  padding: 0 5px;
+  font-family: Eckmann, serif;
+  font-size: 32px;
+  color: #ddccc0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.difficulty-item-active {
+  transform: scale(1.1);
+  border-top: 3px solid #ddccc0;
+  border-bottom: 3px solid #ddccc0;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 40%;
+}
+
+.deck-up {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  height: 50%;
+}
+
+.shuffle {
+  font-family: Eckmann, serif;
+  color: #ddccc0;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shuffle:hover {
+  color: #ffb986;
+}
+
+.shuffle:active {
+  transform: scale(0.95);
+}
+
+.shuffle-deactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #ddccc0;
+}
+
+.stage-remove {
+  text-decoration: line-through;
+}
+
+.stage-header {
+  font-family: Eckmann, serif;
+  font-size: 22px;
+  color: #ddccc0;
+}
+
+.stage-numbers {
+  display: flex;
+  gap: 10px;
+}
+
+.stage-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-family: Eckmann, serif;
+  font-size: 20px;
+  color: #ddccc0;
+  border-radius: 50%;
+}
+
+.stage-number-green {
+  background: #2c4e12;
+}
+
+.stage-number-brown {
+  background: #9f7100;
+}
+
+.stage-number-blue {
+  background: #3c4895;
+}
+
+.deck-down {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 50%;
+}
+
+.shirt,
+.card {
+  flex-basis: 40%;
+}
+
+.shirt {
+  background: url("assets/mythicCardBackground.png") center no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.shirt-deactive {
+  background: none;
+  pointer-events: none;
+}
+
+.card {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
