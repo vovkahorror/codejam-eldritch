@@ -177,7 +177,7 @@ body {
 }
 
 .shirt-deactive {
-  background: none;
+  background-image: none;
   pointer-events: none;
 }
 

@@ -315,6 +315,7 @@ function getShuffle() {
 
   createCardList(ancient, greenCards, blueCards, brownCards);
   changeNumbers();
+  activateShirt();
 }
 
 function createCardList(ancient, greenCards, blueCards, brownCards) {
@@ -497,6 +498,10 @@ function activateShuffle() {
   if (state.ancient.length !== 0 && state.difficulty.length !== 0) {
     shuffle.classList.remove("shuffle-deactive");
   }
+}
+
+function activateShirt() {
+  shirt.classList.remove("shirt-deactive");
 }
 
 ancients.forEach((el) => {
